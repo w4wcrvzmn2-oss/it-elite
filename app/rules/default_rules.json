@@ -1,0 +1,31 @@
+{
+  "normative_documents": [
+    {
+      "id": "SP_42_13330_2016",
+      "title": "СП 42.13330.2016",
+      "description": "Градостроительство. Планировка и застройка городских и сельских поселений"
+    },
+    {
+      "id": "743_PP",
+      "title": "Постановление Правительства Москвы №743-ПП",
+      "description": "Требования к озеленению территории"
+    },
+    {
+      "id": "623_PP",
+      "title": "Постановление Правительства Москвы №623-ПП",
+      "description": "Требования к благоустройству"
+    },
+    {
+      "id": "MGSN",
+      "title": "МГСН",
+      "description": "Московские городские строительные нормы"
+    }
+  ],
+  "verification_required": [
+    "743-ПП — minimum distance from communications (TODO_VERIFY)",
+    "743-ПП — communication buffer zone (TODO_VERIFY)",
+    "СП 42.13330.2016 — minimum distance from buildings (TODO_VERIFY)",
+    "623-ПП — minimum distance from roads (TODO_VERIFY)",
+    "МГСН — specific planting requirements (TODO_VERIFY)"
+  ]
+}

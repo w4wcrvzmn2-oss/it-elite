@@ -1,0 +1,95 @@
+project:
+  name: green-planner
+  random_seed: 42
+
+layers:
+  communications:
+    - COMMUNICATIONS
+    - COMM
+    - WATER
+    - GAS
+    - ELECTRIC
+    - CABLE
+    - PIPE
+    - NETWORK
+  buildings:
+    - BUILDING
+    - BUILDINGS
+  roads:
+    - ROAD
+    - ROADS
+    - STREET
+    - HIGHWAY
+  boundary:
+    - BOUNDARY
+    - SITE
+    - LAND
+    - SITE_BOUNDARY
+
+planting:
+  tree:
+    enabled: true
+    min_spacing: 6.0
+    candidate_grid_step: 3.0
+    symbol_radius: 1.5
+    max_count: null
+    target_density: null
+  shrub:
+    enabled: true
+    min_spacing: 2.0
+    candidate_grid_step: 1.5
+    symbol_radius: 0.5
+    max_count: null
+    target_density: null
+
+rules:
+  tree:
+    communication:
+      minimum_distance: 2.0
+      regulation:
+        document: "743-ПП"
+        clause: "TODO_VERIFY"
+        description: "Минимальный отступ от коммуникаций для деревьев"
+    building:
+      minimum_distance: 5.0
+      regulation:
+        document: "СП 42.13330.2016"
+        clause: "TODO_VERIFY"
+        description: "Минимальный отступ от зданий для деревьев"
+    road:
+      minimum_distance: 3.0
+      regulation:
+        document: "623-ПП"
+        clause: "TODO_VERIFY"
+        description: "Минимальный отступ от дорог для деревьев"
+  shrub:
+    communication:
+      minimum_distance: 1.0
+      regulation:
+        document: "743-ПП"
+        clause: "TODO_VERIFY"
+        description: "Минимальный отступ от коммуникаций для кустарников"
+    building:
+      minimum_distance: 2.0
+      regulation:
+        document: "СП 42.13330.2016"
+        clause: "TODO_VERIFY"
+        description: "Минимальный отступ от зданий для кустарников"
+    road:
+      minimum_distance: 1.5
+      regulation:
+        document: "623-ПП"
+        clause: "TODO_VERIFY"
+        description: "Минимальный отступ от дорог для кустарников"
+  communication:
+    default_buffer: 2.0
+    regulation:
+      document: "743-ПП"
+      clause: "TODO_VERIFY"
+      description: "Буферная зона вокруг коммуникаций"
+
+output:
+  planting_layer: PLANTING_PROPOSED
+  tree_layer: PLANTING_TREES
+  shrub_layer: PLANTING_SHRUBS
+  debug_layer: PLANTING_DEBUG

@@ -1,0 +1,23 @@
+# Layer classification overrides — extend or replace default.yaml layers section
+layers:
+  communications:
+    - PIPE
+    - WATER
+    - GAS
+  boundary:
+    - SITE
+
+# Normative distance rules reference
+normative_documents:
+  - id: "SP_42_13330_2016"
+    title: "СП 42.13330.2016"
+    description: "Градостроительство. Планировка и застройка городских и сельских поселений"
+  - id: "743_PP"
+    title: "Постановление Правительства Москвы №743-ПП"
+    description: "Требования к озеленению территории"
+  - id: "623_PP"
+    title: "Постановление Правительства Москвы №623-ПП"
+    description: "Требования к благоустройству"
+  - id: "MGSN"
+    title: "МГСН"
+    description: "Московские городские строительные нормы"
